@@ -1,0 +1,22 @@
+PODS:
+  - SQLite.swift (0.14.1):
+    - SQLite.swift/standard (= 0.14.1)
+  - SQLite.swift/standard (0.14.1)
+  - SwiftyGif (5.4.4)
+
+DEPENDENCIES:
+  - SQLite.swift (~> 0.14.0)
+  - SwiftyGif
+
+SPEC REPOS:
+  trunk:
+    - SQLite.swift
+    - SwiftyGif
+
+SPEC CHECKSUMS:
+  SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
+  SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
+
+PODFILE CHECKSUM: bd7a3b5d788a26c1f2ca496c6bd6d4917de0c8eb
+
+COCOAPODS: 1.14.3

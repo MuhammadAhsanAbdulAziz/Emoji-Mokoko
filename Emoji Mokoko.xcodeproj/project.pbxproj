@@ -1,0 +1,1050 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52134B9D2B0B70E200FFB412 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52134B9C2B0B70E200FFB412 /* SplashScreen.swift */; };
+		52134BA12B0B789E00FFB412 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52134BA02B0B789E00FFB412 /* Settings.swift */; };
+		521ABD872B1F2D7C00C4A789 /* Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 521ABD862B1F2D7C00C4A789 /* Video.mov */; };
+		522A7E9A2B175BD80039642C /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522A7E902B175BD70039642C /* SharedCode.framework */; };
+		522A7EA52B175BD80039642C /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522A7E902B175BD70039642C /* SharedCode.framework */; };
+		522A7EA62B175BD80039642C /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 522A7E902B175BD70039642C /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5240C7C72B1DF739002DE70B /* SharedPrefrencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7FF632B17042800878665 /* SharedPrefrencesManager.swift */; };
+		5240C7C92B1DF75D002DE70B /* SharedPrefrencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240C7C82B1DF75D002DE70B /* SharedPrefrencesManager.swift */; };
+		524211B02B0B698300E9A587 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524211AF2B0B698300E9A587 /* Homepage.swift */; };
+		525127492B22EF03001ED676 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525127472B22EF03001ED676 /* EmojiView.swift */; };
+		5251274A2B22EF03001ED676 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525127482B22EF03001ED676 /* GifView.swift */; };
+		5251274C2B22EF3B001ED676 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251274B2B22EF3B001ED676 /* EmojiModel.swift */; };
+		526CE52C2B189468003DD95C /* FullScreenVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CE52B2B189468003DD95C /* FullScreenVideoPlayer.swift */; };
+		52D5B7B02B0CD1FB00F83DD2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5B7AF2B0CD1FB00F83DD2 /* KeyboardViewController.swift */; };
+		52D5B7B42B0CD1FB00F83DD2 /* Mokoko Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52D5B7BD2B0CD26700F83DD2 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D5B7BC2B0CD26700F83DD2 /* media.xcassets */; };
+		52E7FF682B17062600878665 /* DB_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7FF672B17062600878665 /* DB_Manager.swift */; };
+		52EA8CD72B170F2000E6DA1A /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5B7BA2B0CD21E00F83DD2 /* KeyboardView.swift */; };
+		52EE4F142B10D8D50061CB52 /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52EE4F132B10D8D50061CB52 /* gif1.gif */; };
+		52EE4F162B10D8FC0061CB52 /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52EE4F152B10D8FC0061CB52 /* gif2.gif */; };
+		52EE4F182B10D9040061CB52 /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52EE4F172B10D9040061CB52 /* gif3.gif */; };
+		52FDFEC32B062AD4003739DD /* Emoji_MokokoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDFEC22B062AD4003739DD /* Emoji_MokokoApp.swift */; };
+		52FDFEC72B062AD7003739DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FDFEC62B062AD7003739DD /* Assets.xcassets */; };
+		52FDFECA2B062AD7003739DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FDFEC92B062AD7003739DD /* Preview Assets.xcassets */; };
+		551A289BD1C2F3D3A8C70F2E /* Pods_Mokoko_Keyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE462029AB84D4D06754866 /* Pods_Mokoko_Keyboard.framework */; };
+		B3988F18DEF46481577E35FF /* Pods_Emoji_Mokoko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762FDBA3E11AFCB403611150 /* Pods_Emoji_Mokoko.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		522A7E9B2B175BD80039642C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FDFEB72B062AD4003739DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 522A7E8F2B175BD70039642C;
+			remoteInfo = SharedCode;
+		};
+		522A7E9D2B175BD80039642C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FDFEB72B062AD4003739DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52FDFEBE2B062AD4003739DD;
+			remoteInfo = "Emoji Mokoko";
+		};
+		522A7EA32B175BD80039642C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FDFEB72B062AD4003739DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 522A7E8F2B175BD70039642C;
+			remoteInfo = SharedCode;
+		};
+		52D5B7B22B0CD1FB00F83DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FDFEB72B062AD4003739DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52D5B7AC2B0CD1FA00F83DD2;
+			remoteInfo = "Mokoko Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		522A7EAA2B175BD80039642C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				522A7EA62B175BD80039642C /* SharedCode.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52D5B78A2B0CB8E700F83DD2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52D5B7B42B0CD1FB00F83DD2 /* Mokoko Keyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		049FC6FDC4B35570A0593817 /* Pods-Emoji MokokoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji MokokoTests.debug.xcconfig"; path = "Target Support Files/Pods-Emoji MokokoTests/Pods-Emoji MokokoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FB3D2507315E53F70653ED6 /* Pods-Emoji Mokoko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Mokoko.release.xcconfig"; path = "Target Support Files/Pods-Emoji Mokoko/Pods-Emoji Mokoko.release.xcconfig"; sourceTree = "<group>"; };
+		4E13EE656F8AC2B9D2071B10 /* Pods-Mokoko Keyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mokoko Keyboard.release.xcconfig"; path = "Target Support Files/Pods-Mokoko Keyboard/Pods-Mokoko Keyboard.release.xcconfig"; sourceTree = "<group>"; };
+		52134B9C2B0B70E200FFB412 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		52134BA02B0B789E00FFB412 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		521ABD862B1F2D7C00C4A789 /* Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Video.mov; path = ../../../../../../Downloads/Video.mov; sourceTree = "<group>"; };
+		522A7E902B175BD70039642C /* SharedCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		522A7E992B175BD80039642C /* SharedCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		522A7EB52B175C100039642C /* SharedCodee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedCodee.h; sourceTree = "<group>"; };
+		5240C7C82B1DF75D002DE70B /* SharedPrefrencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPrefrencesManager.swift; sourceTree = "<group>"; };
+		524211AF2B0B698300E9A587 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		525127472B22EF03001ED676 /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiView.swift; path = ../../../../../../.Trash/EmojiView.swift; sourceTree = "<group>"; };
+		525127482B22EF03001ED676 /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifView.swift; path = ../../../../../../.Trash/GifView.swift; sourceTree = "<group>"; };
+		5251274B2B22EF3B001ED676 /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiModel.swift; path = ../../../../../../.Trash/EmojiModel.swift; sourceTree = "<group>"; };
+		525E539E2B1762DE0062FE58 /* Emoji Mokoko.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Emoji Mokoko.entitlements"; sourceTree = "<group>"; };
+		525E539F2B1765640062FE58 /* Mokoko Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mokoko Keyboard.entitlements"; sourceTree = "<group>"; };
+		526CE52B2B189468003DD95C /* FullScreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenVideoPlayer.swift; sourceTree = "<group>"; };
+		52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mokoko Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D5B7AF2B0CD1FB00F83DD2 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		52D5B7B12B0CD1FB00F83DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D5B7BA2B0CD21E00F83DD2 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		52D5B7BC2B0CD26700F83DD2 /* media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = media.xcassets; sourceTree = "<group>"; };
+		52E7FF632B17042800878665 /* SharedPrefrencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPrefrencesManager.swift; sourceTree = "<group>"; };
+		52E7FF672B17062600878665 /* DB_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DB_Manager.swift; path = "Mokoko Keyboard/Utils/DB_Manager.swift"; sourceTree = SOURCE_ROOT; };
+		52EE4F132B10D8D50061CB52 /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif1.gif; path = "Mokoko Keyboard/media.xcassets/gif1.dataset/gif1.gif"; sourceTree = SOURCE_ROOT; };
+		52EE4F152B10D8FC0061CB52 /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif2.gif; path = "Mokoko Keyboard/media.xcassets/gif2.dataset/gif2.gif"; sourceTree = SOURCE_ROOT; };
+		52EE4F172B10D9040061CB52 /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif3.gif; path = "Mokoko Keyboard/media.xcassets/gif3.dataset/gif3.gif"; sourceTree = SOURCE_ROOT; };
+		52FDFEBF2B062AD4003739DD /* Emoji Mokoko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Mokoko.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FDFEC22B062AD4003739DD /* Emoji_MokokoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_MokokoApp.swift; sourceTree = "<group>"; };
+		52FDFEC62B062AD7003739DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52FDFEC92B062AD7003739DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55D37820EA07897A002CACA4 /* Pods_Emoji_MokokoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emoji_MokokoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733573EF2EAEB49D4FD3B5B5 /* Pods_Emoji_Mokoko_Emoji_MokokoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emoji_Mokoko_Emoji_MokokoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		762FDBA3E11AFCB403611150 /* Pods_Emoji_Mokoko.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emoji_Mokoko.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81ECDE3F81F46B605F5EEC9F /* Pods-Mokoko Keyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mokoko Keyboard.debug.xcconfig"; path = "Target Support Files/Pods-Mokoko Keyboard/Pods-Mokoko Keyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		9BE462029AB84D4D06754866 /* Pods_Mokoko_Keyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mokoko_Keyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2379C05C0CE3BE8942422F0 /* Pods-Emoji Mokoko-Emoji MokokoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Mokoko-Emoji MokokoUITests.release.xcconfig"; path = "Target Support Files/Pods-Emoji Mokoko-Emoji MokokoUITests/Pods-Emoji Mokoko-Emoji MokokoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A49537E6E701059730319284 /* Pods-Emoji Mokoko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Mokoko.debug.xcconfig"; path = "Target Support Files/Pods-Emoji Mokoko/Pods-Emoji Mokoko.debug.xcconfig"; sourceTree = "<group>"; };
+		E62B1657EAA7B393C460AED3 /* Pods-Emoji MokokoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji MokokoTests.release.xcconfig"; path = "Target Support Files/Pods-Emoji MokokoTests/Pods-Emoji MokokoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F6466340CCE89D235D725D7D /* Pods-Emoji Mokoko-Emoji MokokoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emoji Mokoko-Emoji MokokoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emoji Mokoko-Emoji MokokoUITests/Pods-Emoji Mokoko-Emoji MokokoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		522A7E8D2B175BD70039642C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522A7E962B175BD80039642C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522A7E9A2B175BD80039642C /* SharedCode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52D5B7AA2B0CD1FA00F83DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551A289BD1C2F3D3A8C70F2E /* Pods_Mokoko_Keyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FDFEBC2B062AD4003739DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522A7EA52B175BD80039642C /* SharedCode.framework in Frameworks */,
+				B3988F18DEF46481577E35FF /* Pods_Emoji_Mokoko.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		522A7EB42B175C100039642C /* SharedCodee */ = {
+			isa = PBXGroup;
+			children = (
+				522A7EB52B175C100039642C /* SharedCodee.h */,
+			);
+			path = SharedCodee;
+			sourceTree = "<group>";
+		};
+		522D90C92B10CA68006B9CFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5251274B2B22EF3B001ED676 /* EmojiModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5240C7C02B1DF6EC002DE70B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5240C7C82B1DF75D002DE70B /* SharedPrefrencesManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		524211AE2B0B695700E9A587 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				521ABD862B1F2D7C00C4A789 /* Video.mov */,
+				524211AF2B0B698300E9A587 /* Homepage.swift */,
+				52134B9C2B0B70E200FFB412 /* SplashScreen.swift */,
+				52134BA02B0B789E00FFB412 /* Settings.swift */,
+				526CE52B2B189468003DD95C /* FullScreenVideoPlayer.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		52D5B7AE2B0CD1FA00F83DD2 /* Mokoko Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				525E539F2B1765640062FE58 /* Mokoko Keyboard.entitlements */,
+				52E7FF662B1705FB00878665 /* Utils */,
+				522D90C92B10CA68006B9CFB /* Models */,
+				52E45F562B10A8F800EA5A7B /* Screens */,
+				52D5B7AF2B0CD1FB00F83DD2 /* KeyboardViewController.swift */,
+				52D5B7B12B0CD1FB00F83DD2 /* Info.plist */,
+				52D5B7BC2B0CD26700F83DD2 /* media.xcassets */,
+			);
+			path = "Mokoko Keyboard";
+			sourceTree = "<group>";
+		};
+		52E45F562B10A8F800EA5A7B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				525127472B22EF03001ED676 /* EmojiView.swift */,
+				525127482B22EF03001ED676 /* GifView.swift */,
+				52EE4F172B10D9040061CB52 /* gif3.gif */,
+				52EE4F152B10D8FC0061CB52 /* gif2.gif */,
+				52EE4F132B10D8D50061CB52 /* gif1.gif */,
+				52D5B7BA2B0CD21E00F83DD2 /* KeyboardView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		52E7FF662B1705FB00878665 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52E7FF632B17042800878665 /* SharedPrefrencesManager.swift */,
+				52E7FF672B17062600878665 /* DB_Manager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52FDFEB62B062AD4003739DD = {
+			isa = PBXGroup;
+			children = (
+				52FDFEC12B062AD4003739DD /* Emoji Mokoko */,
+				52D5B7AE2B0CD1FA00F83DD2 /* Mokoko Keyboard */,
+				522A7EB42B175C100039642C /* SharedCodee */,
+				52FDFEC02B062AD4003739DD /* Products */,
+				8D3A9F3114BA44B42336E3EA /* Pods */,
+				94CCD68B43D053E89DB99839 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52FDFEC02B062AD4003739DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52FDFEBF2B062AD4003739DD /* Emoji Mokoko.app */,
+				52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */,
+				522A7E902B175BD70039642C /* SharedCode.framework */,
+				522A7E992B175BD80039642C /* SharedCodeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52FDFEC12B062AD4003739DD /* Emoji Mokoko */ = {
+			isa = PBXGroup;
+			children = (
+				525E539E2B1762DE0062FE58 /* Emoji Mokoko.entitlements */,
+				5240C7C02B1DF6EC002DE70B /* Utils */,
+				524211AE2B0B695700E9A587 /* Screens */,
+				52FDFEC22B062AD4003739DD /* Emoji_MokokoApp.swift */,
+				52FDFEC62B062AD7003739DD /* Assets.xcassets */,
+				52FDFEC82B062AD7003739DD /* Preview Content */,
+			);
+			path = "Emoji Mokoko";
+			sourceTree = "<group>";
+		};
+		52FDFEC82B062AD7003739DD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52FDFEC92B062AD7003739DD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D3A9F3114BA44B42336E3EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A49537E6E701059730319284 /* Pods-Emoji Mokoko.debug.xcconfig */,
+				0FB3D2507315E53F70653ED6 /* Pods-Emoji Mokoko.release.xcconfig */,
+				F6466340CCE89D235D725D7D /* Pods-Emoji Mokoko-Emoji MokokoUITests.debug.xcconfig */,
+				A2379C05C0CE3BE8942422F0 /* Pods-Emoji Mokoko-Emoji MokokoUITests.release.xcconfig */,
+				049FC6FDC4B35570A0593817 /* Pods-Emoji MokokoTests.debug.xcconfig */,
+				E62B1657EAA7B393C460AED3 /* Pods-Emoji MokokoTests.release.xcconfig */,
+				81ECDE3F81F46B605F5EEC9F /* Pods-Mokoko Keyboard.debug.xcconfig */,
+				4E13EE656F8AC2B9D2071B10 /* Pods-Mokoko Keyboard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		94CCD68B43D053E89DB99839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				762FDBA3E11AFCB403611150 /* Pods_Emoji_Mokoko.framework */,
+				733573EF2EAEB49D4FD3B5B5 /* Pods_Emoji_Mokoko_Emoji_MokokoUITests.framework */,
+				55D37820EA07897A002CACA4 /* Pods_Emoji_MokokoTests.framework */,
+				9BE462029AB84D4D06754866 /* Pods_Mokoko_Keyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		522A7E8B2B175BD70039642C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		522A7E8F2B175BD70039642C /* SharedCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522A7EA72B175BD80039642C /* Build configuration list for PBXNativeTarget "SharedCode" */;
+			buildPhases = (
+				522A7E8B2B175BD70039642C /* Headers */,
+				522A7E8C2B175BD70039642C /* Sources */,
+				522A7E8D2B175BD70039642C /* Frameworks */,
+				522A7E8E2B175BD70039642C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedCode;
+			productName = SharedCode;
+			productReference = 522A7E902B175BD70039642C /* SharedCode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		522A7E982B175BD80039642C /* SharedCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522A7EAB2B175BD80039642C /* Build configuration list for PBXNativeTarget "SharedCodeTests" */;
+			buildPhases = (
+				522A7E952B175BD80039642C /* Sources */,
+				522A7E962B175BD80039642C /* Frameworks */,
+				522A7E972B175BD80039642C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				522A7E9C2B175BD80039642C /* PBXTargetDependency */,
+				522A7E9E2B175BD80039642C /* PBXTargetDependency */,
+			);
+			name = SharedCodeTests;
+			productName = SharedCodeTests;
+			productReference = 522A7E992B175BD80039642C /* SharedCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52D5B7AC2B0CD1FA00F83DD2 /* Mokoko Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52D5B7B52B0CD1FB00F83DD2 /* Build configuration list for PBXNativeTarget "Mokoko Keyboard" */;
+			buildPhases = (
+				D72C32E8B3E498B69D7636CD /* [CP] Check Pods Manifest.lock */,
+				52D5B7A92B0CD1FA00F83DD2 /* Sources */,
+				52D5B7AA2B0CD1FA00F83DD2 /* Frameworks */,
+				52D5B7AB2B0CD1FA00F83DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mokoko Keyboard";
+			productName = "Mokoko Keyboard";
+			productReference = 52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		52FDFEBE2B062AD4003739DD /* Emoji Mokoko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FDFEE32B062AD8003739DD /* Build configuration list for PBXNativeTarget "Emoji Mokoko" */;
+			buildPhases = (
+				5D3F89E2804D6BDF34599E67 /* [CP] Check Pods Manifest.lock */,
+				52FDFEBB2B062AD4003739DD /* Sources */,
+				52FDFEBC2B062AD4003739DD /* Frameworks */,
+				52FDFEBD2B062AD4003739DD /* Resources */,
+				52D5B78A2B0CB8E700F83DD2 /* Embed Foundation Extensions */,
+				AE373DFCAA90AB390631876F /* [CP] Embed Pods Frameworks */,
+				522A7EAA2B175BD80039642C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52D5B7B32B0CD1FB00F83DD2 /* PBXTargetDependency */,
+				522A7EA42B175BD80039642C /* PBXTargetDependency */,
+			);
+			name = "Emoji Mokoko";
+			productName = "Emoji Mokoko";
+			productReference = 52FDFEBF2B062AD4003739DD /* Emoji Mokoko.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52FDFEB72B062AD4003739DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					522A7E8F2B175BD70039642C = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					522A7E982B175BD80039642C = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 52FDFEBE2B062AD4003739DD;
+					};
+					52D5B7AC2B0CD1FA00F83DD2 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					52FDFEBE2B062AD4003739DD = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 52FDFEBA2B062AD4003739DD /* Build configuration list for PBXProject "Emoji Mokoko" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52FDFEB62B062AD4003739DD;
+			packageReferences = (
+			);
+			productRefGroup = 52FDFEC02B062AD4003739DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52FDFEBE2B062AD4003739DD /* Emoji Mokoko */,
+				52D5B7AC2B0CD1FA00F83DD2 /* Mokoko Keyboard */,
+				522A7E8F2B175BD70039642C /* SharedCode */,
+				522A7E982B175BD80039642C /* SharedCodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		522A7E8E2B175BD70039642C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522A7E972B175BD80039642C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52D5B7AB2B0CD1FA00F83DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D5B7BD2B0CD26700F83DD2 /* media.xcassets in Resources */,
+				52EE4F182B10D9040061CB52 /* gif3.gif in Resources */,
+				52EE4F162B10D8FC0061CB52 /* gif2.gif in Resources */,
+				52EE4F142B10D8D50061CB52 /* gif1.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FDFEBD2B062AD4003739DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521ABD872B1F2D7C00C4A789 /* Video.mov in Resources */,
+				52FDFECA2B062AD7003739DD /* Preview Assets.xcassets in Resources */,
+				52FDFEC72B062AD7003739DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D3F89E2804D6BDF34599E67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emoji Mokoko-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE373DFCAA90AB390631876F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emoji Mokoko/Pods-Emoji Mokoko-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emoji Mokoko/Pods-Emoji Mokoko-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emoji Mokoko/Pods-Emoji Mokoko-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D72C32E8B3E498B69D7636CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mokoko Keyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		522A7E8C2B175BD70039642C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522A7E952B175BD80039642C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52D5B7A92B0CD1FA00F83DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5251274C2B22EF3B001ED676 /* EmojiModel.swift in Sources */,
+				52EA8CD72B170F2000E6DA1A /* KeyboardView.swift in Sources */,
+				52D5B7B02B0CD1FB00F83DD2 /* KeyboardViewController.swift in Sources */,
+				52E7FF682B17062600878665 /* DB_Manager.swift in Sources */,
+				5251274A2B22EF03001ED676 /* GifView.swift in Sources */,
+				5240C7C72B1DF739002DE70B /* SharedPrefrencesManager.swift in Sources */,
+				525127492B22EF03001ED676 /* EmojiView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FDFEBB2B062AD4003739DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526CE52C2B189468003DD95C /* FullScreenVideoPlayer.swift in Sources */,
+				52134B9D2B0B70E200FFB412 /* SplashScreen.swift in Sources */,
+				52FDFEC32B062AD4003739DD /* Emoji_MokokoApp.swift in Sources */,
+				52134BA12B0B789E00FFB412 /* Settings.swift in Sources */,
+				5240C7C92B1DF75D002DE70B /* SharedPrefrencesManager.swift in Sources */,
+				524211B02B0B698300E9A587 /* Homepage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		522A7E9C2B175BD80039642C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 522A7E8F2B175BD70039642C /* SharedCode */;
+			targetProxy = 522A7E9B2B175BD80039642C /* PBXContainerItemProxy */;
+		};
+		522A7E9E2B175BD80039642C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52FDFEBE2B062AD4003739DD /* Emoji Mokoko */;
+			targetProxy = 522A7E9D2B175BD80039642C /* PBXContainerItemProxy */;
+		};
+		522A7EA42B175BD80039642C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 522A7E8F2B175BD70039642C /* SharedCode */;
+			targetProxy = 522A7EA32B175BD80039642C /* PBXContainerItemProxy */;
+		};
+		52D5B7B32B0CD1FB00F83DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52D5B7AC2B0CD1FA00F83DD2 /* Mokoko Keyboard */;
+			targetProxy = 52D5B7B22B0CD1FB00F83DD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		522A7EA82B175BD80039642C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.share;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		522A7EA92B175BD80039642C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.share;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		522A7EAC2B175BD80039642C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.sharetest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emoji Mokoko.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Emoji Mokoko";
+			};
+			name = Debug;
+		};
+		522A7EAD2B175BD80039642C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.sharetest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emoji Mokoko.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Emoji Mokoko";
+			};
+			name = Release;
+		};
+		52D5B7B62B0CD1FB00F83DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81ECDE3F81F46B605F5EEC9F /* Pods-Mokoko Keyboard.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Mokoko Keyboard/Mokoko Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mokoko Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mokoko Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52D5B7B72B0CD1FB00F83DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E13EE656F8AC2B9D2071B10 /* Pods-Mokoko Keyboard.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Mokoko Keyboard/Mokoko Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mokoko Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mokoko Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52FDFEE12B062AD8003739DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Karim Kawash (ZWS429KLKT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52FDFEE22B062AD8003739DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Karim Kawash (ZWS429KLKT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52FDFEE42B062AD8003739DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A49537E6E701059730319284 /* Pods-Emoji Mokoko.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Emoji Mokoko/Emoji Mokoko.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Emoji Mokoko/Preview Content\"";
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Mokoko";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52FDFEE52B062AD8003739DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB3D2507315E53F70653ED6 /* Pods-Emoji Mokoko.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Emoji Mokoko/Emoji Mokoko.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Emoji Mokoko/Preview Content\"";
+				DEVELOPMENT_TEAM = CY34UY7WVB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Emoji Mokoko";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		522A7EA72B175BD80039642C /* Build configuration list for PBXNativeTarget "SharedCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522A7EA82B175BD80039642C /* Debug */,
+				522A7EA92B175BD80039642C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522A7EAB2B175BD80039642C /* Build configuration list for PBXNativeTarget "SharedCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522A7EAC2B175BD80039642C /* Debug */,
+				522A7EAD2B175BD80039642C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52D5B7B52B0CD1FB00F83DD2 /* Build configuration list for PBXNativeTarget "Mokoko Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D5B7B62B0CD1FB00F83DD2 /* Debug */,
+				52D5B7B72B0CD1FB00F83DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FDFEBA2B062AD4003739DD /* Build configuration list for PBXProject "Emoji Mokoko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FDFEE12B062AD8003739DD /* Debug */,
+				52FDFEE22B062AD8003739DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FDFEE32B062AD8003739DD /* Build configuration list for PBXNativeTarget "Emoji Mokoko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52FDFEE42B062AD8003739DD /* Debug */,
+				52FDFEE52B062AD8003739DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52FDFEB72B062AD4003739DD /* Project object */;
+}
