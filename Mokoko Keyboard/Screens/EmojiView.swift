@@ -1,18 +1,20 @@
 //
 //  EmojiView.swift
-//  Mokoko Keyboard
+//  Emoji Mokoko
 //
-//  Created by Macbook Pro on 08/12/2023.
+//  Created by Macbook Pro on 21/11/2023.
 //
 
 import SwiftUI
 
 struct EmojiView: View {
+    
+    var image: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Image(image)
+                .resizable()
+                .frame(width:35,height:35)
     }
 }
 
-#Preview {
-    EmojiView()
-}
