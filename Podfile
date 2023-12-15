@@ -9,6 +9,7 @@ target 'Emoji Mokoko' do
   # Pods for Emoji Mokoko
   pod 'SQLite.swift', '~> 0.14.0'
   pod 'SwiftyGif'
+  
 end
 
 target 'Mokoko Keyboard' do
@@ -16,6 +17,7 @@ target 'Mokoko Keyboard' do
   use_frameworks!
   
   pod 'SwiftyGif'
+  pod 'WebPKit'
 
   # Pods for Mokoko Keyboard
 end

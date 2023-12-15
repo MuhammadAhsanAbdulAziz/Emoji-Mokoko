@@ -60,68 +60,64 @@ struct Homepage: View {
                             isFullScreen = false
                         }
                 }
+                
+                Text("Watch The Setup Tutorial Video")
+                    .bold()
+                    .font(.system(size:12))
+                    .padding()
+                
+                HStack{
                     
-                    Text("Watch The Setup Tutorial Video")
+                    VStack(alignment:.leading){
+                        
+                        Text("1. Click Setup the keyboard")
+                        Text("2. Enable the Mokoko keyboard")
+                        Text("3. That's it")
+                    }
+                    .foregroundStyle(.gray)
+                    .fontWeight(.light)
+                    .font(.system(size:15))
+                    .padding()
+                    
+                    Spacer()
+                }
+                
+                Button{
+                    
+                    openAppSettings()
+                    
+                } label:{
+                    Text("Setup The Keyboard")
+                        .frame(width:350,height: 50)
+                        .background(.darkBlue)
+                        .foregroundStyle(.white)
                         .bold()
-                        .font(.system(size:12))
-                        .padding()
-                    
-                    HStack{
-                        
-                        VStack(alignment:.leading){
-                            
-                            Text("1. Click Setup the keyboard")
-                            Text("2. Enable the Mokoko keyboard")
-                            Text("3. That's it")
-                        }
-                        .foregroundStyle(.gray)
-                        .fontWeight(.light)
-                        .font(.system(size:15))
-                        .padding()
-                        
-                        Spacer()
-                    }
-                    
-                    Button{
-                        
-                        openAppSettings()
-                        
-                    } label:{
-                        Text("Setup The Keyboard")
-                            .frame(width:350,height: 50)
-                            .background(.darkBlue)
-                            .foregroundStyle(.white)
-                            .bold()
-                            .cornerRadius(7)
-                    }
-                    
-                    Button{
-                        switchScreen = true
-                    }label:{
-                        Text("Settings")
-                            .frame(width:350,height: 50)
-                            .background(.darkBlue)
-                            .foregroundStyle(.white)
-                            .bold()
-                            .cornerRadius(7)
-                    }.sheet(isPresented: $switchScreen) {
-                        Settings(isPresented: $switchScreen)
-                    }
+                        .cornerRadius(7)
+                }
+                
+                Button{
+                    switchScreen = true
+                }label:{
+                    Text("Settings")
+                        .frame(width:350,height: 50)
+                        .background(.darkBlue)
+                        .foregroundStyle(.white)
+                        .bold()
+                        .cornerRadius(7)
+                }.sheet(isPresented: $switchScreen) {
+                    Settings(isPresented: $switchScreen)
                 }
             }
         }
-        
     }
     
-    private func openAppSettings() {
-        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
-            return
-        }
-        
-        if UIApplication.shared.canOpenURL(settingsURL) {
-            UIApplication.shared.open(settingsURL)
-        }
-    }
+}
+
+private func openAppSettings() {
+    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+
+
+}
 
 
 #Preview{

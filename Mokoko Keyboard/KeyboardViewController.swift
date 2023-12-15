@@ -3,7 +3,7 @@ import UIKit
 import SwiftUI
 
 class KeyboardViewController: UIInputViewController {
-
+    
     @IBOutlet var nextKeyboardButton: UIButton!
     private let keyboardView = KeyboardView()
     
@@ -32,8 +32,14 @@ class KeyboardViewController: UIInputViewController {
         
         view.addKeyboardSubView(UIHostingController(rootView: keyboardView).view)
         
+        NotificationCenter.default.addObserver(forName: Notification.Name("CancelButtonPressed"), object: nil, queue: nil) { [weak self] _ in
+                    self?.cancelButtonPressed()
+        }
     }
-    
+    private func cancelButtonPressed() {
+        // Perform deleteBackward on the document text
+        textDocumentProxy.deleteBackward()
+    }
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
         super.viewWillLayoutSubviews()

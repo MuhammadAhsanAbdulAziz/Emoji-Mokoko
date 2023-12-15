@@ -8,6 +8,7 @@
 import SwiftUI
 import MobileCoreServices
 import SwiftyGif
+import WebPKit
 
 struct KeyboardView: View {
     @State var isEmojiClicked = false
@@ -30,9 +31,9 @@ struct KeyboardView: View {
                         
                         if value1 {
                             RecentlyUsedEmojis(showOverlay: $showOverlay, emojiManager: emojiManager)
-                                        .onAppear(perform: {
-                                            emojiManager.updateEmojis()
-                                        })
+                                .onAppear(perform: {
+                                    emojiManager.updateEmojis()
+                                })
                         }
                     }
                     
@@ -111,7 +112,7 @@ struct KeyboardView: View {
                 }
                 
                 HStack{
-//                    settingViewButton()
+                    //                    settingViewButton()
                     emojiViewButton(isClicked: $isEmojiClicked, Gif: $isGifClicked)
                     if isEmojiClicked {
                         CollectionEmojis(emojiSelected:$emojiSelected)
@@ -135,7 +136,7 @@ struct KeyboardView: View {
                     CustomOverlayView()
                         .onAppear {
                             // Use onAppear to trigger the overlay visibility
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation {
                                     showOverlay = false
                                 }
@@ -261,18 +262,9 @@ struct emojiListView: View {
                     .onTapGesture {
                         DB_Manager().addEmoji(nameValue: name)
                         emojiManager.updateEmojis()
-                        if let image = UIImage(named: name) {
-                            // Copy image object to pasteboard
-                            UIPasteboard.general.image = image
-                            
-                            // Open iMessage
-                            let context = NSExtensionContext()
-                            context.open(URL(string: "sms:")!, completionHandler: nil)
-                            
-                            // Pass the image object through notification
-                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addKey"), object: image)
-                            showOverlay.toggle()
-                        }
+                        saveToPasteBoard(image: name)
+                        showOverlay.toggle()
+                        
                     }
                 
             }
@@ -282,17 +274,8 @@ struct emojiListView: View {
                     .onTapGesture {
                         DB_Manager().addEmoji(nameValue: name)
                         emojiManager.updateEmojis()
-                        if let image = UIImage(named: name) {
-                            if let imageData = image.pngData() {
-                                // Copy image data to pasteboard
-                                UIPasteboard.general.setData(imageData, forPasteboardType: "public.png")
-                                
-                                // Open iMessage
-                                let context = NSExtensionContext()
-                                context.open(URL(string: "sms:")!, completionHandler: nil)
-                                showOverlay.toggle()
-                            }
-                        }
+                        saveToPasteBoard(image: name)
+                        showOverlay.toggle()
                     }
                 
             }
@@ -304,10 +287,10 @@ struct emojiListView: View {
 
 struct RecentlyUsedEmojis: View {
     @Binding var showOverlay: Bool
-        @ObservedObject var emojiManager: EmojiManager
-        let rows = [
-            GridItem(.fixed(30)),
-        ]
+    @ObservedObject var emojiManager: EmojiManager
+    let rows = [
+        GridItem(.fixed(30)),
+    ]
     
     var body: some View {
         ScrollView(.horizontal){
@@ -315,17 +298,8 @@ struct RecentlyUsedEmojis: View {
                 ForEach(emojiManager.emojiModels, id: \.id) { emojiModel in
                     EmojiView(image: emojiModel.name)
                         .onTapGesture {
-                            if let image = UIImage(named: emojiModel.name) {
-                                if let imageData = image.pngData() {
-                                    // Copy image data to pasteboard
-                                    UIPasteboard.general.setData(imageData, forPasteboardType: "public.png")
-                                    
-                                    // Open iMessage
-                                    let context = NSExtensionContext()
-                                    context.open(URL(string: "sms:")!, completionHandler: nil)
-                                    showOverlay.toggle()
-                                }
-                            }
+                            saveToPasteBoard(image: emojiModel.name)
+                            showOverlay.toggle()
                         }
                 }
                 
@@ -338,7 +312,7 @@ struct selectedEmojiListView: View {
     
     @ObservedObject var emojiManager: EmojiManager
     @Binding var showOverlay: Bool
-
+    
     let rows = [
         GridItem(.fixed(30)),
         GridItem(.fixed(30)),
@@ -355,17 +329,8 @@ struct selectedEmojiListView: View {
                         .onTapGesture {
                             DB_Manager().addEmoji(nameValue: emoji)
                             emojiManager.updateEmojis()
-                            if let image = UIImage(named: emoji) {
-                                if let imageData = image.pngData() {
-                                    // Copy image data to pasteboard
-                                    UIPasteboard.general.setData(imageData, forPasteboardType: "public.png")
-                                    
-                                    // Open iMessage
-                                    let context = NSExtensionContext()
-                                    context.open(URL(string: "sms:")!, completionHandler: nil)
-                                    showOverlay.toggle()
-                                }
-                            }
+                            saveToPasteBoard(image: emoji)
+                            showOverlay.toggle()
                         }
                 }
             }
@@ -382,11 +347,11 @@ struct gifListView: View {
     var body: some View {
         LazyHGrid(rows:rows,alignment:.center,spacing: 10){
             ForEach(1..<4) { index in
-                GifView( "gif\(index)")
+                GifView( "transparentgif\(index)")
                     .onTapGesture {
                         let url: NSURL = Bundle.main.url(forResource: "gif\(index)", withExtension: ".gif")! as NSURL
                         let data: NSData = NSData(contentsOf: url as URL)!
-                        UIPasteboard.general.setData(data as Data, forPasteboardType: "com.compuserve.gif")
+                        UIPasteboard.general.setData((data as NSData) as Data, forPasteboardType: "com.compuserve.gif")
                         showOverlay.toggle()
                     }
             }
@@ -397,7 +362,7 @@ struct gifListView: View {
 struct settingViewButton: View {
     var body: some View {
         Button{
-         }label:{
+        }label:{
             Image("settingicon")
                 .resizable()
                 .padding(10)
@@ -487,6 +452,7 @@ struct cancelViewButton: View {
             if emojiSelected != ""{
                 emojiSelected = ""
             }
+            NotificationCenter.default.post(name: Notification.Name("CancelButtonPressed"), object: nil)
         }label:{
             Image("cancelicon")
                 .resizable()
@@ -506,8 +472,34 @@ struct cancelViewButton: View {
 
 class EmojiManager: ObservableObject {
     @Published var emojiModels: [EmojiModel] = []
-
+    
     func updateEmojis() {
         self.emojiModels = DB_Manager().getEmojis()
     }
 }
+
+func saveToPasteBoard(image: String) {
+    // Load the image
+    guard let originalImage = UIImage(named: image) else {
+        print("Error: Unable to load the image")
+        return
+    }
+
+    // Convert the image to WebP format using WebPKit
+    do {
+        let webpData = try originalImage.webpData()
+        
+        // Create a new UIImage from the WebP data
+        guard let webpImage = UIImage(webpData: webpData) else {
+            print("Error: Unable to create UIImage from WebP data")
+            return
+        }
+
+        UIPasteboard.general.image = webpImage
+
+        print("Image copied to pasteboard")
+    } catch {
+        print("Error: \(error.localizedDescription)")
+    }
+}
+

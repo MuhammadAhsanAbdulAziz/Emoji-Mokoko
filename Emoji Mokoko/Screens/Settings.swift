@@ -118,7 +118,7 @@ struct Settings: View {
 //                            .font(.system(size: 13))
 //                            .padding(.leading,15)
 //                            .padding(.top,-25)
-//                        
+//
 //                    }
 //                }
                 
