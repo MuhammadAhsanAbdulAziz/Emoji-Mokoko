@@ -15,18 +15,19 @@
 		5240C7C72B1DF739002DE70B /* SharedPrefrencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7FF632B17042800878665 /* SharedPrefrencesManager.swift */; };
 		5240C7C92B1DF75D002DE70B /* SharedPrefrencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240C7C82B1DF75D002DE70B /* SharedPrefrencesManager.swift */; };
 		524211B02B0B698300E9A587 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524211AF2B0B698300E9A587 /* Homepage.swift */; };
+		524D95E52B30346A00EB474F /* transparentgif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 524D95E42B30346A00EB474F /* transparentgif1.gif */; };
+		524D95E92B30353800EB474F /* transparentgif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 524D95E72B30353800EB474F /* transparentgif3.gif */; };
+		524D95EB2B30359F00EB474F /* transparentgif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 524D95EA2B30359E00EB474F /* transparentgif2.gif */; };
 		526CE52C2B189468003DD95C /* FullScreenVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CE52B2B189468003DD95C /* FullScreenVideoPlayer.swift */; };
 		52791F262B2737870039589A /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791F252B2737870039589A /* EmojiModel.swift */; };
 		52791F2C2B2737C10039589A /* Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 52791F2B2B2737C10039589A /* Video.mov */; };
 		52791F302B2738FD0039589A /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791F2F2B2738FD0039589A /* EmojiView.swift */; };
 		52791F322B2739220039589A /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791F312B2739220039589A /* GifView.swift */; };
 		52791F3B2B273E4C0039589A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52791F3A2B273E4C0039589A /* Settings.bundle */; };
-		527C569A2B2B3CEC00D4024F /* transparentgif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C56972B2B3CEB00D4024F /* transparentgif1.gif */; };
-		527C569B2B2B3CEC00D4024F /* transparentgif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C56982B2B3CEB00D4024F /* transparentgif3.gif */; };
-		527C569C2B2B3CEC00D4024F /* transparentgif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C56992B2B3CEC00D4024F /* transparentgif2.gif */; };
 		527C56A02B2B3DE900D4024F /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C569D2B2B3DE700D4024F /* gif3.gif */; };
 		527C56A12B2B3DE900D4024F /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C569E2B2B3DE800D4024F /* gif2.gif */; };
 		527C56A22B2B3DE900D4024F /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 527C569F2B2B3DE800D4024F /* gif1.gif */; };
+		529427272B301CFC00017F6D /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 529427262B301CFC00017F6D /* sound.wav */; };
 		52D5B7B02B0CD1FB00F83DD2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5B7AF2B0CD1FB00F83DD2 /* KeyboardViewController.swift */; };
 		52D5B7B42B0CD1FB00F83DD2 /* Mokoko Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52D5B7BD2B0CD26700F83DD2 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D5B7BC2B0CD26700F83DD2 /* media.xcassets */; };
@@ -105,6 +106,9 @@
 		522A7E992B175BD80039642C /* SharedCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5240C7C82B1DF75D002DE70B /* SharedPrefrencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPrefrencesManager.swift; sourceTree = "<group>"; };
 		524211AF2B0B698300E9A587 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		524D95E42B30346A00EB474F /* transparentgif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif1.gif; sourceTree = "<group>"; };
+		524D95E72B30353800EB474F /* transparentgif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif3.gif; sourceTree = "<group>"; };
+		524D95EA2B30359E00EB474F /* transparentgif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif2.gif; sourceTree = "<group>"; };
 		525E539E2B1762DE0062FE58 /* Emoji Mokoko.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Emoji Mokoko.entitlements"; sourceTree = "<group>"; };
 		525E539F2B1765640062FE58 /* Mokoko Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mokoko Keyboard.entitlements"; sourceTree = "<group>"; };
 		526CE52B2B189468003DD95C /* FullScreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenVideoPlayer.swift; sourceTree = "<group>"; };
@@ -113,12 +117,10 @@
 		52791F2F2B2738FD0039589A /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		52791F312B2739220039589A /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		52791F3A2B273E4C0039589A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		527C56972B2B3CEB00D4024F /* transparentgif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif1.gif; sourceTree = "<group>"; };
-		527C56982B2B3CEB00D4024F /* transparentgif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif3.gif; sourceTree = "<group>"; };
-		527C56992B2B3CEC00D4024F /* transparentgif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = transparentgif2.gif; sourceTree = "<group>"; };
 		527C569D2B2B3DE700D4024F /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif3.gif; sourceTree = "<group>"; };
 		527C569E2B2B3DE800D4024F /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif2.gif; sourceTree = "<group>"; };
 		527C569F2B2B3DE800D4024F /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
+		529427262B301CFC00017F6D /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		52D5B7AD2B0CD1FA00F83DD2 /* Mokoko Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mokoko Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D5B7AF2B0CD1FB00F83DD2 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		52D5B7B12B0CD1FB00F83DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,13 +225,14 @@
 			isa = PBXGroup;
 			children = (
 				52791F312B2739220039589A /* GifView.swift */,
+				529427262B301CFC00017F6D /* sound.wav */,
 				527C569F2B2B3DE800D4024F /* gif1.gif */,
 				527C569E2B2B3DE800D4024F /* gif2.gif */,
 				527C569D2B2B3DE700D4024F /* gif3.gif */,
 				52791F2F2B2738FD0039589A /* EmojiView.swift */,
-				527C56972B2B3CEB00D4024F /* transparentgif1.gif */,
-				527C56992B2B3CEC00D4024F /* transparentgif2.gif */,
-				527C56982B2B3CEB00D4024F /* transparentgif3.gif */,
+				524D95E42B30346A00EB474F /* transparentgif1.gif */,
+				524D95EA2B30359E00EB474F /* transparentgif2.gif */,
+				524D95E72B30353800EB474F /* transparentgif3.gif */,
 				52D5B7BA2B0CD21E00F83DD2 /* KeyboardView.swift */,
 			);
 			path = Screens;
@@ -472,13 +475,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527C569A2B2B3CEC00D4024F /* transparentgif1.gif in Resources */,
+				524D95E52B30346A00EB474F /* transparentgif1.gif in Resources */,
+				524D95EB2B30359F00EB474F /* transparentgif2.gif in Resources */,
+				524D95E92B30353800EB474F /* transparentgif3.gif in Resources */,
 				527C56A22B2B3DE900D4024F /* gif1.gif in Resources */,
-				527C569C2B2B3CEC00D4024F /* transparentgif2.gif in Resources */,
 				527C56A02B2B3DE900D4024F /* gif3.gif in Resources */,
 				52D5B7BD2B0CD26700F83DD2 /* media.xcassets in Resources */,
 				527C56A12B2B3DE900D4024F /* gif2.gif in Resources */,
-				527C569B2B2B3CEC00D4024F /* transparentgif3.gif in Resources */,
+				529427272B301CFC00017F6D /* sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,7 +756,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Mokoko Keyboard/Mokoko Keyboard.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = CY34UY7WVB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mokoko Keyboard/Info.plist";
@@ -764,7 +768,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -782,7 +786,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Mokoko Keyboard/Mokoko Keyboard.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = CY34UY7WVB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mokoko Keyboard/Info.plist";
@@ -794,7 +798,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -938,7 +942,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Emoji Mokoko/Emoji Mokoko.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Emoji Mokoko/Preview Content\"";
 				DEVELOPMENT_TEAM = CY34UY7WVB;
 				ENABLE_PREVIEWS = YES;
@@ -955,7 +959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -975,7 +979,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Emoji Mokoko/Emoji Mokoko.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Emoji Mokoko/Preview Content\"";
 				DEVELOPMENT_TEAM = CY34UY7WVB;
 				ENABLE_PREVIEWS = YES;
@@ -992,7 +996,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cap.EmojiMokoko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -14,12 +14,14 @@ PODS:
   - SQLite.swift (0.14.1):
     - SQLite.swift/standard (= 0.14.1)
   - SQLite.swift/standard (0.14.1)
+  - SwiftGifOrigin (1.7.0)
   - SwiftyGif (5.4.4)
   - WebPKit (1.0.0):
     - libwebp
 
 DEPENDENCIES:
   - SQLite.swift (~> 0.14.0)
+  - SwiftGifOrigin
   - SwiftyGif
   - WebPKit
 
@@ -27,15 +29,17 @@ SPEC REPOS:
   trunk:
     - libwebp
     - SQLite.swift
+    - SwiftGifOrigin
     - SwiftyGif
     - WebPKit
 
 SPEC CHECKSUMS:
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
   WebPKit: 3378e8250d078969625289eae10b8a4894b4cb93
 
-PODFILE CHECKSUM: ab798288e297c21a7d804037d4d9b067071c41c7
+PODFILE CHECKSUM: 834ae51f20978be29dd0d0671ef09741093fe897
 
 COCOAPODS: 1.14.3

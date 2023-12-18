@@ -18,6 +18,6 @@ target 'Mokoko Keyboard' do
   
   pod 'SwiftyGif'
   pod 'WebPKit'
-
+  pod 'SwiftGifOrigin'
   # Pods for Mokoko Keyboard
 end

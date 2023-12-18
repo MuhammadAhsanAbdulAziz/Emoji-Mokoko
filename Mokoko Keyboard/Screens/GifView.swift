@@ -1,30 +1,41 @@
 import SwiftUI
+import SwiftGifOrigin
 
-struct GifView: View {
+struct GifView: UIViewRepresentable {
     private let name: String
 
     init(_ name: String) {
         self.name = name
     }
 
-    var body: some View {
-        if let gifImage = UIImage(gif: name) {
-            Image(uiImage: gifImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        } else {
-            Text("Error loading GIF")
-        }
-    }
-}
+    func makeUIView(context: Context) -> UIImageView {
+        let imageView = UIImageView()
 
-extension UIImage {
-    convenience init?(gif name: String) {
-        guard let gifPath = Bundle.main.path(forResource: name, ofType: "gif"),
-              let gifData = try? Data(contentsOf: URL(fileURLWithPath: gifPath)) else {
+        guard let gifData = loadData() else {
+            print("Error loading GIF data")
+            return imageView
+        }
+
+        do {
+            let gifImage = try UIImage(gifData: gifData)
+            imageView.setGifImage(gifImage)
+        } catch {
+            print("Error creating GIF image: \(error)")
+        }
+
+        return imageView
+    }
+
+    func updateUIView(_ uiView: UIImageView, context: Context) {
+        // No need to update for a static image
+    }
+
+    private func loadData() -> Data? {
+        guard let gifPath = Bundle.main.path(forResource: name, ofType: "gif") else {
+            print("GIF file not found")
             return nil
         }
 
-        self.init(data: gifData)
+        return FileManager.default.contents(atPath: gifPath)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 import MobileCoreServices
 import SwiftyGif
 import WebPKit
+import AVFoundation
 
 struct KeyboardView: View {
     @State var isEmojiClicked = false
@@ -182,71 +183,91 @@ struct CollectionEmojis: View {
             LazyHGrid(rows:rows,spacing: 10){
                 EmojiView(image: "emoji_a_07")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_07"
                     }
                 EmojiView(image: "emoji_a_01")
                     .onTapGesture {
+                        playSound(soundName: "sound", soundExtension: "wav")
+                        vibrate()
                         emojiSelected = "emoji_a_01"
                     }
                 EmojiView(image: "emoji_a_19")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_19"
                     }
                 EmojiView(image: "emoji_a_1_58")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_1_58"
                     }
                 EmojiView(image: "emoji_a_27")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_27"
                     }
                 EmojiView(image: "emoji_a_33")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_33"
                     }
                 EmojiView(image: "emoji_a_41")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_41"
                     }
                 EmojiView(image: "emoji_a_49")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_49"
                     }
                 EmojiView(image: "emoji_a_59")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_59"
                     }
                 EmojiView(image: "emoji_a_1_03")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_1_03"
                     }
                 EmojiView(image: "emoji_a_1_12")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_1_12"
                     }
                 EmojiView(image: "emoji_a_1_25")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_1_25"
                     }
                 EmojiView(image: "emoji_a_1_33")
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         emojiSelected = "emoji_a_1_33"
                     }
             }
         }
     }
 }
-
-func addKey() {
-    if let imageData = UIPasteboard.general.data(forPasteboardType: "public.png") {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addKey"), object: imageData)
-    }
-}
-
 struct emojiListView: View {
     
     @Binding var showOverlay: Bool
     @ObservedObject var emojiManager: EmojiManager
+    @State private var shouldPlaySound = false
     let rows = [
         GridItem(.fixed(30)),
         GridItem(.fixed(30)),
@@ -256,10 +277,29 @@ struct emojiListView: View {
     
     var body: some View {
         LazyHGrid(rows:rows,spacing: 10){
+            let emoji = "hello"
+            EmojiView(image: emoji)
+                .onTapGesture {
+                    shouldPlaySound = true
+                    vibrate()
+                    playSound(soundName: "sound", soundExtension: ".wav")
+                    DB_Manager().addEmoji(nameValue: emoji)
+                    emojiManager.updateEmojis()
+                    saveToPasteBoard(image: emoji)
+                    showOverlay.toggle()
+                    
+                }
+                .onChange(of: shouldPlaySound) { newValue in
+                            if newValue {
+                                playSound(soundName: "sound", soundExtension: "wav")
+                            }
+                        }
             ForEach(1..<65) { index in
                 let name = "emoji_a_\(index < 10 ? "0" : "")\(index)"
                 EmojiView(image: name)
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         DB_Manager().addEmoji(nameValue: name)
                         emojiManager.updateEmojis()
                         saveToPasteBoard(image: name)
@@ -269,9 +309,11 @@ struct emojiListView: View {
                 
             }
             ForEach(1..<65) { index in
-                let name = "emoji_a_\(index < 10 ? "0" : "")\(index)"
+                let name = "emoji_a_1_\(index < 10 ? "0" : "")\(index)"
                 EmojiView(image: name)
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         DB_Manager().addEmoji(nameValue: name)
                         emojiManager.updateEmojis()
                         saveToPasteBoard(image: name)
@@ -298,6 +340,8 @@ struct RecentlyUsedEmojis: View {
                 ForEach(emojiManager.emojiModels, id: \.id) { emojiModel in
                     EmojiView(image: emojiModel.name)
                         .onTapGesture {
+                            vibrate()
+                            playSound(soundName: "sound", soundExtension: "wav")
                             saveToPasteBoard(image: emojiModel.name)
                             showOverlay.toggle()
                         }
@@ -327,6 +371,8 @@ struct selectedEmojiListView: View {
                 ForEach(emojis, id: \.self) { emoji in
                     EmojiView(image: emoji)
                         .onTapGesture {
+                            vibrate()
+                            playSound(soundName: "sound", soundExtension: "wav")
                             DB_Manager().addEmoji(nameValue: emoji)
                             emojiManager.updateEmojis()
                             saveToPasteBoard(image: emoji)
@@ -345,10 +391,13 @@ struct gifListView: View {
     ]
     
     var body: some View {
-        LazyHGrid(rows:rows,alignment:.center,spacing: 10){
+        LazyHGrid(rows:rows,alignment: .center,spacing: 20){
             ForEach(1..<4) { index in
                 GifView( "transparentgif\(index)")
+                
                     .onTapGesture {
+                        vibrate()
+                        playSound(soundName: "sound", soundExtension: "wav")
                         let url: NSURL = Bundle.main.url(forResource: "gif\(index)", withExtension: ".gif")! as NSURL
                         let data: NSData = NSData(contentsOf: url as URL)!
                         UIPasteboard.general.setData((data as NSData) as Data, forPasteboardType: "com.compuserve.gif")
@@ -359,6 +408,7 @@ struct gifListView: View {
         .padding(5)
     }
 }
+
 struct settingViewButton: View {
     var body: some View {
         Button{
@@ -386,6 +436,8 @@ struct emojiViewButton: View {
     
     var body: some View {
         Button{
+            vibrate()
+            playSound(soundName: "sound", soundExtension: "wav")
             isClicked.toggle()
             if Gif {
                 Gif.toggle()
@@ -414,6 +466,8 @@ struct gifViewButton: View {
     
     var body: some View {
         Button{
+            vibrate()
+            playSound(soundName: "sound", soundExtension: "wav")
             isClicked.toggle()
             if Emoji {
                 Emoji.toggle()
@@ -443,6 +497,9 @@ struct cancelViewButton: View {
     
     var body: some View {
         Button{
+            vibrate()
+            playSound(soundName: "sound", soundExtension: "wav")
+            
             if Emoji{
                 Emoji.toggle()
             }
@@ -484,22 +541,23 @@ func saveToPasteBoard(image: String) {
         print("Error: Unable to load the image")
         return
     }
-
-    // Convert the image to WebP format using WebPKit
-    do {
-        let webpData = try originalImage.webpData()
-        
-        // Create a new UIImage from the WebP data
-        guard let webpImage = UIImage(webpData: webpData) else {
-            print("Error: Unable to create UIImage from WebP data")
-            return
-        }
-
-        UIPasteboard.general.image = webpImage
-
-        print("Image copied to pasteboard")
-    } catch {
-        print("Error: \(error.localizedDescription)")
-    }
+    UIPasteboard.general.image = originalImage
 }
 
+func vibrate() {
+        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+        impactFeedbackgenerator.prepare()
+        impactFeedbackgenerator.impactOccurred()
+    }
+
+func playSound(soundName: String, soundExtension: String) {
+//    guard let url = Bundle.main.url(forResource: soundName, withExtension: soundExtension) else {
+//        print("Error: Sound file not found.")
+//        return
+//    }
+//
+//    let playerItem = AVPlayerItem(url: url)
+//    let player = AVPlayer(playerItem: playerItem)
+//    player.play()
+    AudioServicesPlaySystemSound(1104)
+}
