@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "emoji_a_1_42.png",
+      "filename" : "emoji_a_1_65.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,9 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "compression-type" : "gpu-optimized-best",
-    "localizable" : true
   }
 }
