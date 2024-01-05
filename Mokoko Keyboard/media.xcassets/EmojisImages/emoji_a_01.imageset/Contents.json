@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "compression-type" : "gpu-optimized-best",
       "filename" : "emoji_a_01.png",
       "idiom" : "universal",
       "scale" : "1x"
@@ -18,10 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "compression-type" : "gpu-optimized-best",
-    "preserves-vector-representation" : true,
-    "template-rendering-intent" : "original"
   }
 }
