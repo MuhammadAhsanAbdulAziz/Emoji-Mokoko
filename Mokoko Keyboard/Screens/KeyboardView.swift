@@ -157,6 +157,7 @@ func specialEmoji() -> [String] {
     return emojiArray
 }
 
+
 struct CustomOverlayView: View {
     var body: some View {
         VStack {
@@ -176,7 +177,7 @@ struct CustomOverlayView: View {
 struct CollectionEmojis: View {
     @Binding var emojiSelected : String
     let rows = [
-        GridItem(.fixed(10)),
+        GridItem(.fixed(UIDevice.isIPhone ? 10 : 20)),
     ]
     var body: some View {
         ScrollView(.horizontal){
@@ -269,32 +270,15 @@ struct emojiListView: View {
     @ObservedObject var emojiManager: EmojiManager
     @State private var shouldPlaySound = false
     let rows = [
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30))
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 )),
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 )),
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 ))
     ]
     
     
     var body: some View {
         LazyHGrid(rows:rows,spacing: 10){
-            let emoji = "hello"
-            EmojiView(image: emoji)
-                .onTapGesture {
-                    shouldPlaySound = true
-                    vibrate()
-                    playSound(soundName: "sound", soundExtension: ".wav")
-                    DB_Manager().addEmoji(nameValue: emoji)
-                    emojiManager.updateEmojis()
-                    saveToPasteBoard(image: emoji)
-                    showOverlay.toggle()
-                    
-                }
-                .onChange(of: shouldPlaySound) { newValue in
-                            if newValue {
-                                playSound(soundName: "sound", soundExtension: "wav")
-                            }
-                        }
-            ForEach(1..<65) { index in
+            ForEach(1..<64) { index in
                 let name = "emoji_a_\(index < 10 ? "0" : "")\(index)"
                 EmojiView(image: name)
                     .onTapGesture {
@@ -308,7 +292,7 @@ struct emojiListView: View {
                     }
                 
             }
-            ForEach(1..<65) { index in
+            ForEach(1..<64) { index in
                 let name = "emoji_a_1_\(index < 10 ? "0" : "")\(index)"
                 EmojiView(image: name)
                     .onTapGesture {
@@ -331,7 +315,7 @@ struct RecentlyUsedEmojis: View {
     @Binding var showOverlay: Bool
     @ObservedObject var emojiManager: EmojiManager
     let rows = [
-        GridItem(.fixed(30)),
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 )),
     ]
     
     var body: some View {
@@ -358,9 +342,9 @@ struct selectedEmojiListView: View {
     @Binding var showOverlay: Bool
     
     let rows = [
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30)),
-        GridItem(.fixed(30))
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 )),
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 )),
+        GridItem(.fixed(UIDevice.isIPhone ? 30 : 50 ))
     ]
     
     let emojis: [String]
@@ -387,7 +371,7 @@ struct selectedEmojiListView: View {
 struct gifListView: View {
     @Binding var showOverlay:Bool
     let rows = [
-        GridItem(.fixed(100))
+        GridItem(.fixed(UIDevice.isIPhone ? 100 : 200 ))
     ]
     
     var body: some View {
@@ -416,7 +400,7 @@ struct settingViewButton: View {
             Image("settingicon")
                 .resizable()
                 .padding(10)
-                .frame(width:35,height:35)
+                .frame(width: UIDevice.isIPhone ? 35 : 50,height:UIDevice.isIPhone ? 35 : 50)
                 .background(.white)
                 .cornerRadius(16)
                 .overlay(
@@ -446,7 +430,7 @@ struct emojiViewButton: View {
             Image(isClicked ? "whiteemojiicon" : "emojiicon")
                 .resizable()
                 .padding(10)
-                .frame(width:35,height:35)
+                .frame(width:UIDevice.isIPhone ? 35 : 50,height:UIDevice.isIPhone ? 35 : 50)
                 .background(isClicked ? .black : .white)
                 .cornerRadius(16)
                 .overlay(
@@ -476,7 +460,7 @@ struct gifViewButton: View {
             Image(isClicked ? "whitegificon" : "gificon")
                 .resizable()
                 .padding(10)
-                .frame(width:35,height:35)
+                .frame(width:UIDevice.isIPhone ? 35 : 50,height:UIDevice.isIPhone ? 35 : 50)
                 .background(isClicked ? .black : .white)
                 .cornerRadius(16)
                 .overlay(
@@ -514,7 +498,7 @@ struct cancelViewButton: View {
             Image("cancelicon")
                 .resizable()
                 .padding(10)
-                .frame(width:40,height:35)
+                .frame(width:UIDevice.isIPhone ? 35 : 50,height:UIDevice.isIPhone ? 35 : 50)
                 .background(.white)
                 .cornerRadius(16)
                 .overlay(
@@ -551,13 +535,15 @@ func vibrate() {
     }
 
 func playSound(soundName: String, soundExtension: String) {
-//    guard let url = Bundle.main.url(forResource: soundName, withExtension: soundExtension) else {
-//        print("Error: Sound file not found.")
-//        return
-//    }
-//
-//    let playerItem = AVPlayerItem(url: url)
-//    let player = AVPlayer(playerItem: playerItem)
-//    player.play()
     AudioServicesPlaySystemSound(1104)
+}
+
+extension UIDevice {
+    static var isIPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
+    static var isIPhone: Bool {
+        UIDevice.current.userInterfaceIdiom == .phone
+    }
 }

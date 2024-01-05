@@ -14,7 +14,7 @@ struct EmojiView: View {
     var body: some View {
             Image(image)
                 .resizable()
-                .frame(width:35,height:35)
+                .frame(width:UIDevice.isIPhone ? 35 : 50,height:UIDevice.isIPhone ? 35 : 50)
     }
 }
 
